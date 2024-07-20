@@ -1,0 +1,24 @@
+{
+  "name": "web-component-carousel",
+  "version": "1.0.0",
+  "description": "Carousel WebComponent",
+  "main": "component-carousel.js",
+  "scripts": {
+    "build": "esbuild --bundle --minify --outfile=./dist.min.js component-carousel.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ui",
+    "component",
+    "carousel",
+    "webcomponent"
+  ],
+  "author": "Roman Scharkov <roman.scharkov@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "0.23.0",
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0"
+  }
+}
