@@ -401,6 +401,11 @@ class ComponentCarousel extends HTMLElement {
   }
 
   #onDragStart(event) {
+    if (event.button !== 0) {
+      // React only to left mouse button.
+      return;
+    }
+
     document.addEventListener("mouseup", this.#handlerOnDragEnd);
     document.addEventListener("touchend", this.#handlerOnDragEnd);
     document.addEventListener("mousemove", this.#handlerOnDragging);
