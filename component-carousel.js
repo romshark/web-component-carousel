@@ -228,6 +228,8 @@ class ComponentCarousel extends HTMLElement {
   disconnectedCallback() {
     this.#nodeElements.innerHTML = "";
     this.#nodeThumbnails.innerHTML = "";
+    this.#nodeElements.innerHTML = "";
+    this.#nodeThumbnails.innerHTML = "";
     window.removeEventListener("keydown", this.#handlerOnKeyboardEvent);
     this.#nodeElements.removeEventListener(
       "mousedown",
