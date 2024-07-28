@@ -29,6 +29,7 @@ jobs:
 
       - name: Check for changes
         run: |
+          git config --global --add safe.directory /github/workspace
           if [ -n "$(git status --porcelain)" ]; then
             echo "There are changes in the build files."
             echo "Please rebuild using \`npm run build\` and commit the changes."
