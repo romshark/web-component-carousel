@@ -31,7 +31,7 @@ jobs:
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             echo "There are changes in the build files."
-            echo "Please rebuild using `npm run build` and commit the changes."
+            echo "Please rebuild using \`npm run build\` and commit the changes."
             exit 1
           else
             echo "No changes detected in the build files."
