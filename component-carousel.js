@@ -180,6 +180,8 @@ class ComponentCarousel extends HTMLElement {
         thumbs = origs;
       }
 
+      this.#nodeElements.innerHTML = "";
+      this.#nodeThumbnails.innerHTML = "";
       origs.forEach((node, index) => {
         const cloneElement = node.cloneNode(true);
         this.#nodeElements.appendChild(cloneElement);
@@ -224,6 +226,8 @@ class ComponentCarousel extends HTMLElement {
   }
 
   disconnectedCallback() {
+    this.#nodeElements.innerHTML = "";
+    this.#nodeThumbnails.innerHTML = "";
     window.removeEventListener("keydown", this.#handlerOnKeyboardEvent);
     this.#nodeElements.removeEventListener(
       "mousedown",
